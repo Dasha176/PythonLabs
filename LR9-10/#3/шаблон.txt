@@ -1,0 +1,20 @@
+<table border="1">
+<tr>
+    <td><h2>Название</h2></td>
+    <td><h2>Население</h2></td>
+    <td><h2>Регион</h2></td>
+    <td><h2>Индекс</h2></td>
+    <td><h2>Тип региона</h2></td>
+</tr> 
+{% for el in cities %}
+{%if (el.население >= smallest_population) %}
+    <tr>
+        <td>{{el.название}}</td>
+        <td>{{el.население}}</td>
+        <td>{{el.регион}}</td>
+        <td>{{el.индекс}}</td>
+        <td>{{el.типРегиона}}</td>
+    </tr> 
+{% endif %}
+{% endfor %}
+</table>
